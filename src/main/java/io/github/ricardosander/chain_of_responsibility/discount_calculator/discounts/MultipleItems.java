@@ -1,7 +1,7 @@
-package io.github.ricardosander.chain_of_responsibility.discounts;
+package io.github.ricardosander.chain_of_responsibility.discount_calculator.discounts;
 
-import io.github.ricardosander.chain_of_responsibility.Budget;
-import io.github.ricardosander.chain_of_responsibility.Discount;
+import io.github.ricardosander.chain_of_responsibility.discount_calculator.Budget;
+import io.github.ricardosander.chain_of_responsibility.discount_calculator.Discount;
 
 public class MultipleItems implements Discount {
 

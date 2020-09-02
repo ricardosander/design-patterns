@@ -1,4 +1,4 @@
-package io.github.ricardosander.chain_of_responsibility;
+package io.github.ricardosander.chain_of_responsibility.discount_calculator;
 
 import java.util.ArrayList;
 import java.util.Collections;

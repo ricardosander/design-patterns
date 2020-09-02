@@ -1,6 +1,6 @@
-package io.github.ricardosander.chain_of_responsibility;
+package io.github.ricardosander.chain_of_responsibility.discount_calculator;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
