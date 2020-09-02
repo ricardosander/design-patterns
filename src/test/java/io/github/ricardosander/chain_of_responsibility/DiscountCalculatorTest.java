@@ -12,11 +12,11 @@ public class DiscountCalculatorTest {
     public void computeNoDiscount() {
 
         Budget budget = new Budget(100);
-        budget.add("Item 1");
-        budget.add("Item 2");
-        budget.add("Item 3");
-        budget.add("Item 4");
-        budget.add("Item 5");
+        budget.add("CASE");
+        budget.add("PENCIL");
+        budget.add("NOTEBOOK");
+        budget.add("ERASER");
+        budget.add("BOOK");
 
         double discount = new DiscountCalculator().computeDiscount(budget);
 
@@ -29,12 +29,12 @@ public class DiscountCalculatorTest {
     public void computeMultipleItemsDiscount() {
 
         Budget budget = new Budget(600);
-        budget.add("Item 1");
-        budget.add("Item 2");
-        budget.add("Item 3");
-        budget.add("Item 4");
-        budget.add("Item 5");
-        budget.add("Item 6");
+        budget.add("PEN");
+        budget.add("PENCIL");
+        budget.add("NOTEBOOK");
+        budget.add("ERASER");
+        budget.add("BOOK");
+        budget.add("CASE");
 
         double discount = new DiscountCalculator().computeDiscount(budget);
 
@@ -47,15 +47,32 @@ public class DiscountCalculatorTest {
     public void computeHighPriceDiscount() {
 
         Budget budget = new Budget(600);
-        budget.add("Item 1");
-        budget.add("Item 2");
-        budget.add("Item 3");
-        budget.add("Item 4");
-        budget.add("Item 5");
+        budget.add("PEN");
+        budget.add("PENCIL");
+        budget.add("NOTEBOOK");
+        budget.add("ERASER");
+        budget.add("BOOK");
 
         double discount = new DiscountCalculator().computeDiscount(budget);
 
         double expectedDiscount = 42.0;
+
+        assertEquals(expectedDiscount, discount, DELTA);
+    }
+
+    @Test
+    public void computeComboDiscount() {
+
+        Budget budget = new Budget(100);
+        budget.add("PEN");
+        budget.add("PENCIL");
+        budget.add("NOTEBOOK");
+        budget.add("ERASER");
+        budget.add("BOOK");
+
+        double discount = new DiscountCalculator().computeDiscount(budget);
+
+        double expectedDiscount = 5.0;
 
         assertEquals(expectedDiscount, discount, DELTA);
     }
